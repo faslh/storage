@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@faslh/cloud-storage": ["packages/cloud-storage/src/index.ts"],
+      "@faslh/storage": ["packages/storage/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

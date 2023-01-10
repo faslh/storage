@@ -1,0 +1,8 @@
+{
+  "name": "@faslh/cloud-storage",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "peerDependencies": {
+    "@google-cloud/storage": "^6.9.0"
+  }
+}

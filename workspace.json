@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "projects": {
+    "playground": "apps/playground",
+    "cloud-storage": "packages/storage",
+    "storage": "packages/storage",
+    "workspace": {
+      "root": "libs",
+      "targets": {
+        "release": {
+          "executor": "@jscutlery/semver:version",
+          "options": {
+            "syncVersions": true,
+            "preset": "conventional",
+            "tagPrefix": "",
+            "baseBranch": "master",
+            "push": true,
+            "postTargets": ["storage:publish"]
+          }
+        },
+        "github": {
+          "executor": "@jscutlery/semver:github",
+          "options": {
+            "tag": "${tag}",
+            "notes": "${notes}"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
+}
